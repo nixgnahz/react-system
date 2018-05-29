@@ -1,16 +1,17 @@
 import React from 'react'
 
-import {withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom'
 
 import {Menu} from 'antd'
 
 class MenuHead extends React.Component {
     constructor (props){
         super(props)
+        var pathname = getPathname(props.location.pathname)
+        this.props.history.push(pathname)
         this.state = {
-            current: props.location.pathname
+            current: pathname
         }
-        this.props.history.push(props.location.pathname)
         this.changeMenu = this.changeMenu.bind(this)
     }
 
@@ -32,6 +33,20 @@ class MenuHead extends React.Component {
                 </Menu>
             </section>
         )
+    }
+}
+
+function getPathname(pathname) {
+    if(pathname == '/' || pathname.match('/echart')) {
+        return '/echart'
+    } else if (pathname.match('/activity')) {
+        return '/activity'
+    } else if (pathname.match('/info')) {
+        return '/info'
+    } else if (pathname.match('/general')){
+        return '/general'
+    } else {
+        return pathname
     }
 }
 

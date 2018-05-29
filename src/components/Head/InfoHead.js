@@ -25,7 +25,7 @@ const menu = (
         </Menu.Item>
         <Menu.Item>
             <Icon type="logout" style={{ color: '#495060' }}/>
-            <span className="text layout">Layout</span>
+            <span className="text lagout">Lagout</span>
         </Menu.Item>
     </Menu>
 )
