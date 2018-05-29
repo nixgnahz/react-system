@@ -5,9 +5,9 @@ import './rem'
 
 import 'antd/dist/antd.css'
 
-import Head from './components/Head/Index'
+import App from './components/index'
 
 ReactDom.render(
-    <Head/>,
+    <App/>,
     document.getElementById('root')
 )

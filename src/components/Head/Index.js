@@ -1,11 +1,10 @@
 import React from 'react'
 
-import './index.css'
+import './index.scss'
 
-import Echarts from '../Echarts/Index'
-import Activity from '../Activity/Index'
-import Info from '../Info/Index'
-import General from '../General/Index'
+import LeftHead from './LeftHead'
+import MenuHead from './MenuHead'
+import InfoHead from './InfoHead'
 
 class Head extends React.Component {
     constructor(props) {
@@ -15,11 +14,10 @@ class Head extends React.Component {
 
     render () {
         return (
-            <div>
-                <Echarts/>
-                <Activity/>
-                <Info/>
-                <General/>
+            <div className='head'>
+                <LeftHead/>
+                <MenuHead/>
+                <InfoHead/>
             </div>
         )
     }
