@@ -25,7 +25,7 @@ class SideMenu extends React.Component {
     render () {
         return (
             <div className='sideMenu'>
-                <Menu selectedKeys={[this.state.current]} onClick={this.changeMenu}>
+                <Menu selectedKeys={[this.state.current]} onClick={this.changeMenu} style={{backgroundColor: '#143f6d', color: '#ffffff'}}>
                     <Menu.Item key={ this.state.match + '/user'}>
                         <Icon type="mail" />
                         <span>用户管理</span>

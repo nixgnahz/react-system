@@ -12,7 +12,7 @@ class Info extends React.Component {
     constructor(props) {
         super(props)
         var pathname = props.location.pathname
-        if(pathname.match('/info')) {
+        if(pathname === '/info') {
             pathname = '/info/user'
         }
         this.state = {
@@ -23,7 +23,7 @@ class Info extends React.Component {
 
     render () {
         return (
-            <div>
+            <div className='main'>
                 <SideMenu value={this.state.match} current={this.state.current}/>
                 <div className="content-container">
                     <Route exact path={this.state.match + '/'} render={() =>

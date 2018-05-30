@@ -1,0 +1,60 @@
+.btns {
+  button {
+    margin-right: 0.25rem;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+.tables {
+  margin-top: 0.5rem;
+  button {
+    font-size: 10px;
+    height: 22px;
+    padding: 0px 7px;
+    text-decoration: underline;
+  }
+}
+
+.form-container {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  .add-user {
+    .form-header {
+      font-size: 0.35rem;
+    }
+    .ant-form label {
+      font-size: 11px;
+    }
+    .ant-row {
+      margin-top: 0.2rem;
+    }
+  }
+  .assign-permission {
+    .form-header {
+      font-size: 0.45rem;
+      font-weight: bold;
+    }
+    p {
+      margin: 0.4rem 0px;
+      .labels {
+        width: 8rem;
+        display: inline-block;
+      }
+    }
+
+  }
+  .btns-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+    button {
+      margin-right: 1rem;
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+}

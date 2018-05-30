@@ -37,7 +37,7 @@ class MenuHead extends React.Component {
 }
 
 function getPathname(pathname) {
-    if(pathname == '/' || pathname.match('/echart')) {
+    if(pathname === '/' || pathname.match('/echart')) {
         return '/echart'
     } else if (pathname.match('/activity')) {
         return '/activity'
