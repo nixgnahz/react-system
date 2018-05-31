@@ -1,0 +1,32 @@
+$blue: #2d8cf0;
+
+.rate-container {
+  width: 10rem;
+  margin: 0.5rem 0.25rem;
+  .exchange-word {
+    color: $blue;
+  }
+  .movie {
+    color: $blue;
+    font-weight: 300;
+  }
+  .rate {
+    color: #f5a623;
+    font-weight: 100;
+    font-size: 0.2rem;
+  }
+  .rate-word {
+    font-size: 0.3rem;
+  }
+  .dishes {
+    padding: 0px;
+    li {
+      padding: 0.25rem 0px;
+      border-bottom: 0.02rem solid #eee;
+      .dish-name {
+        margin-right: 0.25rem;
+      }
+    }
+
+  }
+}

@@ -1,5 +1,11 @@
 import React from 'react'
 
+import './index.scss'
+
+import Recommend from './Recommend'
+import DishesRate from './Rate'
+import Dishes from './Dishes'
+
 class Other extends React.Component {
     constructor (props) {
         super(props)
@@ -9,7 +15,9 @@ class Other extends React.Component {
     render () {
         return (
             <div>
-                Other
+                <Recommend/>
+                <DishesRate/>
+                <Dishes/>
             </div>
         )
     }
