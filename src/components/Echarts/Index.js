@@ -7,6 +7,9 @@ import {Route, Redirect} from 'react-router-dom'
 import SideMenu from './SideMenu'
 import Histogram from './Histogram/Index'
 import Radar from './Radar/Index'
+import Line from './Line/Index'
+import Pie from './Pie/Index'
+import Area from './Area/Index'
 
 class Echarts extends React.Component {
     constructor(props) {
@@ -31,6 +34,9 @@ class Echarts extends React.Component {
                     }/>
                     <Route path={this.state.match + '/histogram'} component={Histogram} />
                     <Route path={this.state.match + '/radar'} component={Radar} />
+                    <Route path={this.state.match + '/line'} component={Line} />
+                    <Route path={this.state.match + '/pie'} component={Pie} />
+                    <Route path={this.state.match + '/area'} component={Area} />
                 </div>
             </div>
         )

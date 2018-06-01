@@ -34,6 +34,18 @@ class SideMenu extends React.Component {
                         <Icon type="calendar" />
                         <span>雷达图</span>
                     </Menu.Item>
+                    <Menu.Item key={ this.state.match + '/line'}>
+                        <Icon type="calendar" />
+                        <span>折线图</span>
+                    </Menu.Item>
+                    <Menu.Item key={ this.state.match + '/pie'}>
+                        <Icon type="calendar" />
+                        <span>饼状图</span>
+                    </Menu.Item>
+                    <Menu.Item key={ this.state.match + '/area'}>
+                        <Icon type="calendar" />
+                        <span>面积图</span>
+                    </Menu.Item>
                 </Menu>
             </div>
         )
