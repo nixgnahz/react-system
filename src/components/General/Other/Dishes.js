@@ -57,10 +57,10 @@ class Dishes extends React.Component {
                 <Card title="美食排序">
                     <ul className="dishes">
                         {dishes.map((item)=>
-                            <li>
+                            <li key={item.id}>
                                 <span className="dish-name">{item.name}</span>
                                 {item.labels.map((label, index)=>
-                                    <Tag closable color="green">{label}</Tag>
+                                    <Tag key={index} closable color="green">{label}</Tag>
                                 )}
                             </li>
                         )}

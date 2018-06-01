@@ -1,0 +1,39 @@
+.top-header {
+  p {
+    margin-top: 0.5rem;
+    font-weight: 900;
+  }
+}
+
+.search-container {
+  background-color: #f2f2f2;
+  padding: 0.15rem;
+  input {
+    width: 4rem;
+    font-size: 0.3rem;
+  }
+  button {
+    margin-left: 0.35rem;
+    font-size: 0.25rem;
+  }
+}
+
+.deletes-btn {
+  margin-bottom: 0.4rem;
+  position: absolute;
+  bottom: 0px;
+}
+
+.user-table {
+  margin-top: 0.5rem;
+}
+
+.add-user {
+  width: 10rem;
+}
+
+.close-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+}

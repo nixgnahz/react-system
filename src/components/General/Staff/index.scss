@@ -20,6 +20,7 @@
   background-color: white;
   padding: 0.5rem;
   border-radius: 0.2rem;
+  position: relative;
   .add-user {
     .form-header {
       font-size: 0.35rem;
@@ -43,7 +44,6 @@
         display: inline-block;
       }
     }
-
   }
   .btns-row {
     display: flex;
