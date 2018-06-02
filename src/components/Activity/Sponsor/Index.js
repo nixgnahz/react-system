@@ -1,5 +1,13 @@
 import React from 'react'
 
+import './index.scss'
+
+import Step from './Step'
+import Enroll from './Enroll'
+import Sign from './Sign'
+import Share from './Share'
+import Person from './Person'
+
 class Sponsor extends React.Component {
     constructor (props) {
         super(props)
@@ -9,7 +17,8 @@ class Sponsor extends React.Component {
     render () {
         return (
             <div>
-                Sponsor
+                <Step/>
+                <Enroll/>
             </div>
         )
     }

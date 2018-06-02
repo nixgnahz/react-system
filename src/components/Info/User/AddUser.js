@@ -76,7 +76,7 @@ class AddUser extends React.Component {
                                     }
                                 ]
                             })(
-                                <Input type='text' placeholder="请填写地址"/>
+                                <Input.TextArea type='text' placeholder="请填写地址"/>
                             )}
                         </Form.Item>
                     </Form>

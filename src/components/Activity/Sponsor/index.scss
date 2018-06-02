@@ -1,0 +1,25 @@
+.ant-steps {
+  margin: 0.75rem 0px;
+}
+
+.form {
+  font-size: 0.3rem;
+  .name-input {
+    width: 6.5rem;
+  }
+  .label-input {
+    width: 3.5rem;
+  }
+  .address {
+    .ant-select {
+      width: 2.5rem;
+      margin-right: 0.25rem;
+    }
+  }
+  .ant-input-group-wrapper {
+    width: 3rem;
+  }
+  .upload {
+    font-size: 0.3rem;
+  }
+}
