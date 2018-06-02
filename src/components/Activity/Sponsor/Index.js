@@ -19,6 +19,9 @@ class Sponsor extends React.Component {
             <div>
                 <Step/>
                 <Enroll/>
+                <Sign/>
+                <Share/>
+                <Person/>
             </div>
         )
     }

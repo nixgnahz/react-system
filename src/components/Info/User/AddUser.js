@@ -51,9 +51,9 @@ class AddUser extends React.Component {
                                     {
                                         required: true, message: '请填写年龄'
                                     }
-                                ]})
-                            (
-                                <InputNumber min={1} max={80} />
+                                ]
+                            })(
+                                <InputNumber min={1} max={80}/>
                             )}
                         </Form.Item>
                         <Form.Item label="生日" {...formItemLayout}>

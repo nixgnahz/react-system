@@ -14,9 +14,9 @@ const formItemLayout = {
 class Enroll extends React.Component {
     constructor(props) {
         super(props)
+        this.label = ""
         this.state = {
-            labels: [],
-            label: ""
+            labels: []
         }
         this.addLabel = this.addLabel.bind(this)
         this.getText = this.getText.bind(this)
@@ -26,11 +26,11 @@ class Enroll extends React.Component {
     addLabel () {
         var arr = this.state.labels
         var count = 0
-        arr.map((item)=>{
-            if(item === this.state.label) count++
-        })
+        for(let i = 0; i < arr.length; i++) {
+            if(arr[i] === this.label) count++
+        }
         if(!count) {
-            arr.push(this.state.label)
+            arr.push(this.label)
             this.setState({
                 labels: arr
             })
@@ -48,7 +48,7 @@ class Enroll extends React.Component {
     getText (e) {
         const value = e.target.value.replace(/\s+/, "")
         if(value) {
-            this.state.label = value
+            this.label = value
         }
     }
 
