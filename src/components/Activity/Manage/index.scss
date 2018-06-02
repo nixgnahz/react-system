@@ -1,0 +1,47 @@
+.header {
+  background-color: rgb(51, 204, 204);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 0.5rem 0px;
+  padding: 0.35rem 0px;
+  .item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    padding: 0.25rem 0px;
+    border-right: 1px solid #fff;
+    &:last-child {
+      border-right: 0px;
+    }
+    p {
+      font-size: 0.6rem;
+      margin-bottom: 0.2rem;
+    }
+    span {
+      font-size: 0.3rem;
+      font-weight: 300;
+    }
+  }
+}
+
+.table-container {
+  padding: 0.35rem;
+  margin: 1rem 0px;
+  border: 1px solid #d3dce6;
+  &:hover {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+  }
+  .title {
+    font-weight: bolder;
+    font-size: 0.45rem;
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -330,7 +330,7 @@ class User extends React.Component {
             },
             {
                 title: '操作',
-                    dataIndex: 'action',
+                dataIndex: 'action',
                 align: 'center',
                 render: () => (
                     <div className="btns">
