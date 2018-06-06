@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Form, Button, Input, Upload, Icon, Checkbox} from 'antd'
+import {Form, Button, Input, Checkbox} from 'antd'
 
 const formItemLayout = {
     labelCol: {
