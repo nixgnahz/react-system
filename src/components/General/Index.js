@@ -6,7 +6,7 @@ import {Route, Redirect} from 'react-router-dom'
 
 import SideMenu from './SideMenu'
 import Other from './Other/Index'
-import Staff from './Staff/Index'
+import Staff from '../../containers/Staff'
 
 class General extends React.Component {
     constructor(props) {

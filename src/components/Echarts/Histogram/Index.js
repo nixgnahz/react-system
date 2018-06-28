@@ -8,11 +8,6 @@ import 'echarts/lib/chart/bar'
 import 'echarts/lib/chart/line'
 
 class Histogram extends React.Component {
-    constructor (props) {
-        super(props)
-        this.state = {}
-    }
-
     componentDidMount() {
         var myChart = echarts.init(document.getElementById('chart'));
         myChart.setOption({

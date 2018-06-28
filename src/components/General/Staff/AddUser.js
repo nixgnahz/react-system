@@ -8,16 +8,12 @@ const formItemLayout = {
 }
 
 class AddUser extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
-
     componentDidMount() {
         this.props.form.validateFields()
     }
 
     render () {
+        const {changeEvent} = this.props
         return (
             <div className='mask-container'>
                 <div className='form-container'>
@@ -56,7 +52,7 @@ class AddUser extends React.Component {
                     </Form>
                     <div className="btns-row">
                         <Button type="primary">提交</Button>
-                        <Button>取消</Button>
+                        <Button onClick={changeEvent}>取消</Button>
                     </div>
                 </div>
             </div>

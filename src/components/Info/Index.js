@@ -5,7 +5,7 @@ import './index.scss'
 import {Route, Redirect} from 'react-router-dom'
 
 import SideMenu from './SideMenu'
-import User from './User/Index'
+import User from '../../containers/User'
 import Goods from './Goods/Index'
 
 class Info extends React.Component {

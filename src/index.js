@@ -1,13 +1,16 @@
 import React from 'react'
-import ReactDom from 'react-dom'
-
+import ReactDOM from 'react-dom'
 import './rem'
-
 import 'antd/dist/antd.css'
-
 import App from './components/index'
+import {createStore} from 'redux'
+import {Provider} from 'react-redux'
+import reducer from './reducers/index'
+const store = createStore(reducer)
 
-ReactDom.render(
-    <App/>,
-    document.getElementById('root')
+ReactDOM.render(
+  <Provider store={store}>
+    <App/>
+  </Provider>,
+  document.getElementById('root')
 )

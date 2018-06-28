@@ -6,11 +6,6 @@ import Header from './Header'
 import ActivityList from './ActivityList'
 
 class Manage extends React.Component {
-    constructor (props) {
-        super(props)
-        this.state = {}
-    }
-
     render () {
         return (
             <div>

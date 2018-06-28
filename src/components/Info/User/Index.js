@@ -261,23 +261,15 @@ class User extends React.Component {
     constructor (props) {
         super(props)
         this.state = {
-            sortedInfo: null,
-            showAddUser: false
+            sortedInfo: null
         }
         this.tableChange = this.tableChange.bind(this)
-        this.showAddUser = this.showAddUser.bind(this)
     }
 
     tableChange (pagination, filters, sorter) {
         this.setState({
             sortedInfo: sorter
         })
-    }
-
-    showAddUser () {
-        this.setState((prevState, props) => ({
-            showAddUser: !prevState.showAddUser
-        }))
     }
 
     showDeleteConfirm () {
@@ -293,7 +285,8 @@ class User extends React.Component {
     }
 
     render () {
-        let sortedInfo = this.state.sortedInfo || {}
+        const {status, changeAddStatus} = this.props
+        var sortedInfo = this.state.sortedInfo || {}
         const columns = [
             {
                 title: '#',
@@ -342,8 +335,8 @@ class User extends React.Component {
         ]
 
         var AddUserComponent = null
-        if(this.state.showAddUser) {
-            AddUserComponent = <AddUser/>
+        if(status) {
+            AddUserComponent = <AddUser changeEvent={changeAddStatus}/>
         }
 
         return (
@@ -355,7 +348,7 @@ class User extends React.Component {
                 <div className="search-container">
                     <Input placeholder="请输入用户姓名" />
                     <Button type="primary" icon="search">查询</Button>
-                    <Button type="primary" onClick={this.showAddUser}>新增</Button>
+                    <Button type="primary" onClick={changeAddStatus}>新增</Button>
                 </div>
                 <Table pagination={{showQuickJumper: true, pageSize: 10, total: 30}} rowSelection={rowSelection} className="user-table" columns={columns} dataSource={data} bordered={true} size="small" onChange={this.tableChange}/>
                 <Button disabled={true} className="deletes-btn">批量删除</Button>

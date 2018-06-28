@@ -81,14 +81,8 @@ class Staff extends React.Component {
                 )
             }
         ]
-        this.state = {
-            showAddUser: false,
-            showAssignPermission: false
-        }
         this.showDeleteTips = this.showDeleteTips.bind(this)
         this.showDeleteSuccess = this.showDeleteSuccess.bind(this)
-        this.showAddUser = this.showAddUser.bind(this)
-        this.showAssignPermission = this.showAssignPermission.bind(this)
     }
 
     showDeleteTips () {
@@ -108,25 +102,14 @@ class Staff extends React.Component {
         message.success('删除成功')
     }
 
-    showAddUser () {
-        this.setState((prevState, props) => ({
-            showAddUser: !prevState.showAddUser
-        }))
-    }
-
-    showAssignPermission () {
-        this.setState((prevState, props) => ({
-            showAssignPermission: !prevState.showAssignPermission
-        }))
-    }
-
     render () {
-        var AddUserComponent = <AddUser/>
-        var AssignPermissionComponent = <AssignPermission/>
-        if(!this.state.showAddUser) {
+        const {changeAddStatus, changeAssignStatus, add, assign} = this.props
+        var AddUserComponent = <AddUser changeEvent={changeAddStatus}/>
+        var AssignPermissionComponent = <AssignPermission changeEvent={changeAssignStatus}/>
+        if(!add) {
             AddUserComponent = null
         }
-        if(!this.state.showAssignPermission) {
+        if(!assign) {
             AssignPermissionComponent = null
         }
         return (
@@ -134,8 +117,8 @@ class Staff extends React.Component {
                 {AddUserComponent}
                 {AssignPermissionComponent}
                 <div className="btns">
-                    <Button icon="plus-circle" size="default" onClick={this.showAddUser}>添加用户</Button>
-                    <Button icon="key" size="default" onClick={this.showAssignPermission}>权限分配</Button>
+                    <Button icon="plus-circle" size="default" onClick={changeAddStatus}>添加用户</Button>
+                    <Button icon="key" size="default" onClick={changeAssignStatus}>权限分配</Button>
                 </div>
                 <Table className="tables" loading={config.loading} size='small' pagination={config.pagination} bordered={config.bordered} rowSelection={rowSelection}  columns={this.columns} dataSource={data} />
             </div>

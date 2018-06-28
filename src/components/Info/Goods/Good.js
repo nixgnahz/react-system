@@ -3,11 +3,6 @@ import React from 'react'
 import {Card, Button} from 'antd'
 
 class Good extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
-
     render () {
         return (
             <Card className="good-card" hoverable cover={<img alt="" src="http://wx.wpart.cn/uploads/Q/Qdh4nAHglce5Bkn7PTKf/5/7/6/c/5b10fdbb9e0db.png_p2js" />}>

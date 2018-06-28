@@ -3,12 +3,8 @@ import React from 'react'
 import {Checkbox, Button} from 'antd'
 
 class AssignPermission extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
-
     render () {
+        const {changeEvent} = this.props
         return (
             <div className="mask-container">
                 <div className='form-container'>
@@ -49,7 +45,7 @@ class AssignPermission extends React.Component {
                     </div>
                     <div className="btns-row">
                         <Button type="primary">确定</Button>
-                        <Button>取消</Button>
+                        <Button onClick={changeEvent}>取消</Button>
                     </div>
                 </div>
             </div>

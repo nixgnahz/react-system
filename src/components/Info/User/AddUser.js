@@ -12,18 +12,14 @@ const formItemLayout = {
 }
 
 class AddUser extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
-
     render () {
+        const {changeEvent} = this.props
         const { getFieldDecorator } = this.props.form
         return (
             <div className='mask-container'>
                 <div className='form-container'>
                     <p className='form-header'>创建用户</p>
-                    <p className="close-btn">
+                    <p className="close-btn" onClick={changeEvent}>
                         <Icon type="close" style={{fontSize: 25}}/>
                     </p>
                     <Form className="add-user">
@@ -81,7 +77,7 @@ class AddUser extends React.Component {
                         </Form.Item>
                     </Form>
                     <div className="btns-row">
-                        <Button>取消</Button>
+                        <Button onClick={changeEvent}>取消</Button>
                         <Button type="primary">提交</Button>
                     </div>
                 </div>

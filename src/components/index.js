@@ -13,11 +13,6 @@ import General from './General/Index'
 import './index.scss'
 
 class App extends React.Component {
-    constructor (props){
-        super(props)
-        this.state = {}
-    }
-
     componentDidMount () {
         notification.success({
             message: '欢迎进入REACTADMIN',

@@ -8,11 +8,6 @@ import 'echarts/lib/component/legend'
 import 'echarts/lib/chart/line'
 
 class Line extends React.Component {
-    constructor (props) {
-        super(props)
-        this.state = {}
-    }
-
     componentDidMount() {
         var myChart = echarts.init(document.getElementById('chart'));
         myChart.setOption({

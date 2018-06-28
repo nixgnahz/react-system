@@ -46,11 +46,6 @@ const dishes = [
 ]
 
 class Dishes extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {}
-    }
-
     render () {
         return (
             <div className="rate-container">

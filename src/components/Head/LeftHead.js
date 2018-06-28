@@ -3,11 +3,6 @@ import React from 'react'
 import {Icon} from 'antd'
 
 class LeftHead extends React.Component {
-    constructor (props){
-        super(props)
-        this.state = {}
-    }
-
     render () {
         return (
             <section className="left-head">

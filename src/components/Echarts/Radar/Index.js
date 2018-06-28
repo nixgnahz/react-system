@@ -6,11 +6,6 @@ import 'echarts/lib/component/legend'
 import 'echarts/lib/chart/radar'
 
 class Radar extends React.Component {
-    constructor (props) {
-        super(props)
-        this.state = {}
-    }
-
     componentDidMount() {
         var myChart = echarts.init(document.getElementById('chart'));
         myChart.setOption({

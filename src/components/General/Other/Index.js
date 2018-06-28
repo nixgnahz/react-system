@@ -7,11 +7,6 @@ import DishesRate from './Rate'
 import Dishes from './Dishes'
 
 class Other extends React.Component {
-    constructor (props) {
-        super(props)
-        this.state = {}
-    }
-
     render () {
         return (
             <div>
