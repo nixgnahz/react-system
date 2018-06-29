@@ -5,7 +5,7 @@ import './index.scss'
 import {Route, Redirect} from 'react-router-dom'
 
 import SideMenu from './SideMenu'
-import Sponsor from './Sponsor/Index'
+import Sponsor from '../../containers/Sponsor'
 import Manage from './Manage/Index'
 
 class Activity extends React.Component {

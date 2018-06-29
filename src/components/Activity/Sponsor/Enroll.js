@@ -54,6 +54,7 @@ class Enroll extends React.Component {
 
     render () {
         const { getFieldDecorator } = this.props.form
+        const {increaseStep} = this.props
         return (
             <div>
                 <Form className="form">
@@ -185,7 +186,7 @@ class Enroll extends React.Component {
                 </Form>
                 <div className="btns" style={{marginBottom: '0.5rem'}}>
                     <Button>预览</Button>
-                    <Button type="primary">下一步</Button>
+                    <Button type="primary" onClick={increaseStep}>下一步</Button>
                 </div>
             </div>
         )

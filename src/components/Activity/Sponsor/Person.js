@@ -59,6 +59,7 @@ class Person extends React.Component {
     }
 
     render () {
+        const {decreaseStep} = this.props
         return (
             <div>
                 <Form className="form">
@@ -72,7 +73,7 @@ class Person extends React.Component {
                     </Form.Item>
                 </Form>
                 <div className="btns" style={{marginBottom: '0.5rem'}}>
-                    <Button>上一步</Button>
+                    <Button onClick={decreaseStep}>上一步</Button>
                     <Button type="primary">发布</Button>
                 </div>
             </div>

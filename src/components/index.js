@@ -28,7 +28,7 @@ class App extends React.Component {
                     <Route exact path='/' render={() =>
                         <Redirect to='/echart' />
                     }/>
-                    <Route path='/echart' component={Echarts} />
+                    <Route path='/echart' component={Echarts}/>
                     <Route path='/activity' component={Activity} />
                     <Route path='/info' component={Info} />
                     <Route path='/general' component={General} />

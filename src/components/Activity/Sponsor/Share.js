@@ -13,6 +13,7 @@ const formItemLayout = {
 
 class Share extends React.Component {
     render () {
+        const {increaseStep, decreaseStep} = this.props
         return (
             <div>
                 <Form className="form">
@@ -30,8 +31,8 @@ class Share extends React.Component {
                     </Form.Item>
                 </Form>
                 <div className="btns" style={{marginBottom: '0.5rem'}}>
-                    <Button>上一步</Button>
-                    <Button type="primary">下一步</Button>
+                    <Button onClick={decreaseStep}>上一步</Button>
+                    <Button type="primary" onClick={increaseStep}>下一步</Button>
                 </div>
             </div>
         )
