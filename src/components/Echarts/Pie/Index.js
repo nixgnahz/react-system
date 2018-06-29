@@ -6,6 +6,8 @@ import 'echarts/lib/component/tooltip'
 import 'echarts/lib/component/legend'
 import 'echarts/lib/chart/pie'
 
+import {Breadcrumb} from 'antd'
+
 class Pie extends React.Component {
     componentDidMount() {
         var myChart = echarts.init(document.getElementById('chart'));
@@ -53,10 +55,14 @@ class Pie extends React.Component {
             <div>
                 <div className='top-header'>
                     <p>饼状图</p>
+                    <Breadcrumb>
+                        <Breadcrumb.Item>图表</Breadcrumb.Item>
+                        <Breadcrumb.Item>饼状图</Breadcrumb.Item>
+                    </Breadcrumb>
                 </div>
                 <div id="chart"></div>
             </div>
-    )
+        )
     }
 }
 

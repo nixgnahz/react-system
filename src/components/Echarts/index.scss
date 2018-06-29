@@ -2,3 +2,10 @@
   width: 700px;
   height: 500px;
 }
+
+.top-header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}

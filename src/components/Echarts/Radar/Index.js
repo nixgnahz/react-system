@@ -5,6 +5,8 @@ import 'echarts/lib/component/title'
 import 'echarts/lib/component/legend'
 import 'echarts/lib/chart/radar'
 
+import {Breadcrumb} from 'antd'
+
 class Radar extends React.Component {
     componentDidMount() {
         var myChart = echarts.init(document.getElementById('chart'));
@@ -55,6 +57,10 @@ class Radar extends React.Component {
             <div>
                 <div className='top-header'>
                     <p>雷达图</p>
+                    <Breadcrumb>
+                        <Breadcrumb.Item>图表</Breadcrumb.Item>
+                        <Breadcrumb.Item>雷达图</Breadcrumb.Item>
+                    </Breadcrumb>
                 </div>
                 <div id="chart"></div>
             </div>

@@ -24,17 +24,15 @@ class Enroll extends React.Component {
     }
 
     addLabel () {
+        if(!this.label) return
         var arr = this.state.labels
-        var count = 0
-        for(let i = 0; i < arr.length; i++) {
-            if(arr[i] === this.label) count++
+        for(var i in arr) {
+            if(arr[i] === this.label) return
         }
-        if(!count) {
-            arr.push(this.label)
-            this.setState({
-                labels: arr
-            })
-        }
+        arr.push(this.label)
+        this.setState({
+            labels: arr
+        })
     }
 
     deleteLabel (index) {
@@ -150,7 +148,7 @@ class Enroll extends React.Component {
                     )}
                     </Form.Item>
                     <Form.Item label="活动人数" {...formItemLayout}>
-                        <Radio.Group>
+                        <Radio.Group defaultValue="0">
                             <Radio value="0">无限制</Radio>
                             <Radio value="1">限制</Radio>
                         </Radio.Group>
@@ -166,7 +164,7 @@ class Enroll extends React.Component {
                         <Input.TextArea rows={3} />
                     </Form.Item>
                     <Form.Item label="评价功能" {...formItemLayout}>
-                        <Radio.Group>
+                        <Radio.Group defaultValue="0">
                             <Radio value="0">不开启</Radio>
                             <Radio value="1">实时评价</Radio>
                             <Radio value="2">审核后评价</Radio>
