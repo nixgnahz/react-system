@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './rem'
 import 'antd/dist/antd.css'
 import App from './components/index'
 import {createStore} from 'redux'
